@@ -4,7 +4,8 @@
   "description": "to do list api",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ./src/index.js",
+    "start": "node ./src/index.js",
+    "dev":"nodemon ./src/index.js",
     "deploy":"node index.js",
     "build": "react-scripts eject",
     "test":"react-scripts test",
