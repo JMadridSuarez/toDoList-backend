@@ -48,8 +48,8 @@ const signUp = async(req,res)=>{
         await pool.query(`INSERT INTO users (email,hashed_password) VALUES($1,$2)`,
             [email, hashedPassword]);
            
-        //const token = jwt.sign({email}, 'secret', {expiresIn:'1hr'});
-        //await res.json({email, token});
+        const token = jwt.sign({email}, 'secret', {expiresIn:'1hr'});
+        await res.json({email, token});
         return('success')
     } catch (error) {
         console.error(error)
